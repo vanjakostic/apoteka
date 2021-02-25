@@ -96,4 +96,4 @@ class Lek extends Proizvod
         void setMoguDijabeticari(boolean MOGUDIJABETICARI) {this.moguDijabeticari = MOGUDIJABETICARI;}
   
 
-};
+}
