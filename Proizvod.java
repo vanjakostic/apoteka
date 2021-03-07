@@ -11,11 +11,13 @@ public class Proizvod {
 	protected String mestoProizvodnje;
 	protected double cena;
 	protected boolean dostupan;
+	protected int brojproizvoda;
 	
 	
 	//konstruktor sa parametrima
 	
-	Proizvod(String naziv, Proizvodjaci proizvodjac, datumProizvodnje, String rokTrajanja,String mestoProizvodnje, double cena, boolean dostupan){
+	Proizvod(String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
+			String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda){
 		
 		this.naziv=naziv;
 		this.proizvodjac=proizvodjac;
@@ -24,6 +26,8 @@ public class Proizvod {
 		this.mestoProizvodnje=mestoProizvodnje;
 		this.cena=cena;
 		this.dostupan=dostupan;
+		this.brojproizvoda=brojproizvoda;
+		
 		
 	}
 	
@@ -36,6 +40,7 @@ public class Proizvod {
 	String getMestoProizvodnje() {return mestoProizvodnje; }
 	double getCena(){return cena; }
 	boolean getDostupan(){return dostupan; }
+	int getBrojproizvoda() {return brojproizvoda; }
 
 	
 	//seteri
@@ -53,6 +58,34 @@ public class Proizvod {
 		
 	}
 	void setDostupan(boolean dostupan){this.dostupan=dostupan; }
+	void setBrojproizvoda(int brojproizvoda) {this.brojproizvoda=brojproizvoda; }
+	
+	
+	//potrosi proizvode
+	
+	 boolean potrosi(){
+	        if(brojproizvoda>=20){
+	        	brojproizvoda-=20;
+	        	
+	            if(brojproizvoda==0)
+	            	dostupan=false;
+	            
+	            return true;
+	        }else
+	        return false;
+	  }
+	 
+	 //poruci proizvode
+	 
+	 void naruci(){
+		 brojproizvoda+=20;
+		 
+		 if(dostupan==false)
+			 dostupan=true;
+	        
+	  }
+	 
+	 
 	
 	@Override 
 	public String toString() {
