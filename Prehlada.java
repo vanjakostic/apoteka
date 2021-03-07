@@ -5,7 +5,7 @@ class Prehlada extends Lek
 	//koji simptom prehlade lek smiruje
      protected boolean kasalj, curenjeNosa, zapusenNos, temperatura, bolUGrlu, kijanje, glavobolja;
 	 
-	 Lek()
+	 Prehlada()
         {
         naziv = "Nije unet";
         datumProizvodnje = "Nije unet";
@@ -27,7 +27,7 @@ class Prehlada extends Lek
 		    glavobolja = true;
         }
 
-        Lek(String NAZIV, String DATUMPROIZVODNJE, String MESTOPROIZVODNJE, String ROKTRAJANJA, double CENA, boolean DOSTUPAN,
+        Prehlada(String NAZIV, String DATUMPROIZVODNJE, String MESTOPROIZVODNJE, String ROKTRAJANJA, double CENA, boolean DOSTUPAN,
             lekOblici OBLIK, int UZIMANJANADAN, boolean MOGUDECA, boolean MOGUTRUDNICE, boolean MOGUDIJABETICARI, boolean KASALJ,
 			boolean CURENJENOSA, boolean ZAPUSENNOS, boolean TEMPERATURA, boolean BOLUGRLU, boolean KIJANJE, boolean GLAVOBOLJA)
         {
