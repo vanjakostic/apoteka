@@ -13,7 +13,7 @@ public class Rastvor extends Proizvod {
 	
 	public Rastvor (String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
 			String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
-			Ukus ukusrastvora, boolean elektricna, int brojupakovanju) {
+			Ukus ukusrastvora, boolean izbeljuje, boolean gutanjeOpasno, boolean jacanjeDesni) {
 		
 		super(naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
 		this.ukusrastvora=ukusrastvora;
