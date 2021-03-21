@@ -48,4 +48,20 @@ void setAutomatskoIskljucivanje(boolean automatskoIskljucivanje) {this.automatsk
 void setLEDdisplay(boolean LEDdisplay) {this.LEDdisplay = LEDdisplay;}
 void setIndikatorNapunjenostiBaterije(boolean indikatorNapunjenostiBaterije) {this.indikatorNapunjenostiBaterije = indikatorNapunjenostiBaterije;}
 
+@Override 
+public String toString() {
+    return naziv + 
+    "\n" + datumProizvodnje +
+    "\n" + rokTrajanja +
+    "\n" + mestoProizvodnje +
+    "\n" + tip +
+    "\n" + jedinica +
+    "\n" + maxTezina +
+    "\n" + indikatorOpterecenja +
+    "\n" + automatskoUkljucivanje +
+    "\n" + automatskoIskljucivanje +
+    "\n" + LEDdisplay +
+    "\n" + indikatorNapunjenostiBaterije 
+    ;
+}
 }
