@@ -57,6 +57,26 @@ void setFrekvencija(double frekvencija) {this.frekvencija = frekvencija;}
 void setSnaga(double snaga) {this.snaga = snaga;}
 void setTezina(double tezina) {this.tezina = tezina;}
 void setNivoBuke(int nivoBuke) {this.nivoBuke = nivoBuke;}
+
+@Override 
+public String toString() {
+    return naziv + 
+    "\n" + datumProizvodnje +
+    "\n" + rokTrajanja +
+    "\n" + mestoProizvodnje +
+    "\n" + tip +
+    "\n" + boje +
+    "\n" + duzinaCrevaZaVazduh +
+    "\n" + brojFilteraZaVazduh +
+    "\n" + nazalniTus +
+    "\n" + protokVazduha +
+    "\n" + frekvencija +
+    "\n" + snaga +
+    "\n" + tezina +
+    "\n" + nivoBuke 
+    
+    ;
+}
 }
 
 
