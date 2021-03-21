@@ -38,4 +38,18 @@ void setBrzina(int brzina) {this.brzina = brzina;}
 void setBrojTestPlocica(int brojTestPlocica) {this.brojTestPlocica = brojTestPlocica;}
 void setBrojPipeta(int brojPipeta) {this.brojPipeta = brojPipeta;}
 
+@Override 
+public String toString() {
+    return naziv + 
+    "\n" + datumProizvodnje +
+    "\n" + rokTrajanja +
+    "\n" + mestoProizvodnje +
+    "\n" + osetljivost +
+    "\n" + tacnost +
+    "\n" + brojDanaOdZaceca +
+    "\n" + brzina +
+    "\n" + brojTestPlocica +
+    "\n" + brojPipeta
+    ;
+}
 }
