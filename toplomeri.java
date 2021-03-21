@@ -61,5 +61,24 @@ void setOralnoMerenje(boolean oralnoMerenje) {this.oralnoMerenje = oralnoMerenje
 void setRektalnoMerenje(boolean rektalnoMerenje) {this.rektalnoMerenje = rektalnoMerenje;}
 void setVodootporan(boolean vodootporan) {this.vodootporan = vodootporan;}
 
+@Override 
+public String toString() {
+    return naziv + 
+    "\n" + datumProizvodnje +
+    "\n" + rokTrajanja +
+    "\n" + mestoProizvodnje +
+    "\n" + tip +
+    "\n" + memorisePoslednjuTemperaturu +
+    "\n" + automatskoUkljucivanje +
+    "\n" + tacnostMerenja +
+    "\n" + minTemp +
+    "\n" + maxTemp +
+    "\n" + aksilarnoMerenje +
+    "\n" + oralnoMerenje +
+    "\n" + rektalnoMerenje +
+    "\n" + vodootporan +
+    ;
+}
+
 }
 
