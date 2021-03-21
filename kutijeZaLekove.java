@@ -26,4 +26,17 @@ void setBrojPregrada(int brojPregrada) {this.brojPregrada = brojPregrada;}
 void setSadrziAlarm(boolean sadrziAlarm) {this.sadrziAlarm = sadrziAlarm;}
 void setLEDdisplay(boolean LEDdisplay) {this.LEDdisplay = LEDdisplay;}
 
+@Override 
+public String toString() {
+    return naziv + 
+    "\n" + datumProizvodnje +
+    "\n" + rokTrajanja +
+    "\n" + mestoProizvodnje +
+    "\n" + brojPregrada +
+    "\n" + sadrziAlarm +
+    "\n" + LEDdisplay 
+    
+    
+    ;
+}
 }
