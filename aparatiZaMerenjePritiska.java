@@ -66,4 +66,24 @@ void setDatumIVreme(boolean datumIVreme) {this.datumIVreme = datumIVreme;}
 void setAutomatskoUkljucivanje(boolean automatskoUkljucivanje) {this.automatskoUkljucivanje = automatskoUkljucivanje;}
 void setAutomatskoIskljucivanje(boolean automatskoIskljucivanje) {this.automatskoIskljucivanje = automatskoIskljucivanje;}
 
+@Override 
+public String toString() {
+    return naziv + 
+    "\n" + datumProizvodnje +
+    "\n" + rokTrajanja +
+    "\n" + mestoProizvodnje +
+    "\n" + tip +
+    "\n" + detektorAritmije +
+    "\n" + memorijaRezultata +
+    "\n" + indikatorZaPravilnoPostavljanjeManzetne +
+    "\n" + glasovnaFunkcija +
+    "\n" + indikatorHipertenzije +
+    "\n" + bluetoothFunkcija +
+    "\n" + indikatorIstrosenostiBaterije +
+    "\n" + datumIVreme +
+    "\n" + automatskoIskljucivanje +
+    "\n" + automatskoUkljucivanje +
+    
+    ;
+}
 }
