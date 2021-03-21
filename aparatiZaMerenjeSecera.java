@@ -39,6 +39,20 @@ void setPotrebnaKolicinaKrvi(double potrebnaKolicinaKrvi) {this.potrebnaKolicina
 void setBrojElektroda(int brojElektroda) {this.brojElektroda = brojElektroda;}
 void setKapacitetMemorije(int kapacitetMemorije) {this.kapacitetMemorije = kapacitetMemorije;}
 
-
+@Override 
+public String toString() {
+    return naziv + 
+    "\n" + datumProizvodnje +
+    "\n" + rokTrajanja +
+    "\n" + mestoProizvodnje +
+    "\n" + brojTestTraka +
+    "\n" + brojLanceta +
+    "\n" + brzinaRezultata +
+    "\n" + potrebnaKolicinaKrvi +
+    "\n" + brojElektroda +
+    "\n" + kapacitetMemorije 
+    
+    ;
+}
 
 }
