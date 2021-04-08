@@ -33,4 +33,16 @@ void setKomodogenaSkala(int komodogenaSkala) {this.komodogenaSkala = komodogenaS
 void setPretvaraSeUMleko(boolean pretvaraSeUMleko) {this.pretvaraSeUMleko = pretvaraSeUMleko;}
 void setParfem(boolean parfem) {this.parfem = parfem;}
 
+@Override 
+public String toString() {
+    return naziv + 
+    "\n" + datumProizvodnje +
+    "\n" + rokTrajanja +
+    "\n" + mestoProizvodnje +
+    "\n" + vrsta +
+    "\n" + komodogenaSkala +
+    "\n" + pretvaraSeUMleko +
+    "\n" + parfem
+    ;
+}
 }
