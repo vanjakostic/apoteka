@@ -50,4 +50,22 @@ void setCeramidi(boolean ceramidi) {this.ceramidi = ceramidi;}
 void setPena(boolean pena) {this.pena = pena;}
 void setFormaldehid(boolean formaldehid) {this.formaldehid = formaldehid;}
 void setFtalati(boolean ftalati) {this.ftalati = ftalati;}
+
+@Override 
+public String toString() {
+    return naziv + 
+    "\n" + datumProizvodnje +
+    "\n" + rokTrajanja +
+    "\n" + mestoProizvodnje +
+    "\n" + retinol +
+    "\n" + vitaminC +
+    "\n" + cink +
+    "\n" + glicerin +
+    "\n" + salicilnaKiselina +
+    "\n" + ceramidi +
+    "\n" + pena +
+    "\n" + formaldehid +
+    "\n" + ftalati 
+    ;
+}
 }
