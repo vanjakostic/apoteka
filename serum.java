@@ -1,4 +1,6 @@
-package apoteka;
+package Kozmetika;
+
+import apoteka.Proizvodjaci;
 
 enum serumNamena {ANTI_AGING, PROTIV_AKNI, POSVETLJIVANJE, HIDRIRANJE, REPARACIJA}
 enum glavniSastojak {HIJALURON, C_VITAMIN, KOLAGEN}
