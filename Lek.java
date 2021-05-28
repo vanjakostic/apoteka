@@ -11,9 +11,9 @@ class Lek extends Proizvod
 		protected boolean moguTrudnice;
 		protected boolean moguDijabeticari;
 		
-    public:
+    public
 	
-        Lek()
+      /*  Lek()
         {
         naziv = "Nije unet";
         datumProizvodnje = "Nije unet";
@@ -21,22 +21,18 @@ class Lek extends Proizvod
         rokTrajanja = "Nije unet";
         cena = 478.89;
         dostupan = true;
-        oblik = Tablete;
+        oblik = lekOblici.Tablete;
         uzimanjaNaDan = 3;
         moguDeca = true;
         moguTrudnice = true;
         moguDijabeticari = true;
-        }
+        }*/
 
-        Lek(String NAZIV, String DATUMPROIZVODNJE, String MESTOPROIZVODNJE, String ROKTRAJANJA, double CENA, boolean DOSTUPAN,
+        Lek(int ID, String NAZIV, Proizvodjaci PROIZVODJAC, String DATUMPROIZVODNJE, String ROKTRAJANJA,
+        	String MESTOPROIZVODNJE,  double CENA, boolean DOSTUPAN, int BROJPROIZVODA,
             lekOblici OBLIK, int UZIMANJANADAN, boolean MOGUDECA, boolean MOGUTRUDNICE, boolean MOGUDIJABETICARI)
         {
-        naziv = NAZIV;
-        datumProizvodnje = DATUMPROIZVODNJE;
-        mestoProizvodnje = MESTOPROIZVODNJE;
-        rokTrajanja = ROKTRAJANJA;
-        cena = CENA;
-        dostupan = DOSTUPAN;
+        super(ID, NAZIV, PROIZVODJAC, DATUMPROIZVODNJE, ROKTRAJANJA, MESTOPROIZVODNJE, CENA, DOSTUPAN, BROJPROIZVODA);
         oblik = OBLIK;
         uzimanjaNaDan = UZIMANJANADAN;
         moguDeca = MOGUDECA;
@@ -45,15 +41,15 @@ class Lek extends Proizvod
         }
 
 
-        public void getOblik() 
+        /*public lekOblici getOblik() 
         { 
         switch (oblik) 
         { 
         case Tablete: 
-            return "Tablete";
+            return Tablete;
             break; 
         case Kapsule: 
-            return "Kapsule";
+            return Kapsule;
             break; 
         case Prah: 
 		    return "Prah";
@@ -62,7 +58,7 @@ class Lek extends Proizvod
             return "Sirup";
             break; 
         } 
-        } 
+        } */
         int getUzimanjaNaDan() {return uzimanjaNaDan;}
         boolean getMoguDeca() {return moguDeca;}
         boolean getMoguTrudnice() {return moguTrudnice;}
@@ -70,25 +66,25 @@ class Lek extends Proizvod
 
         void setOblik()
         {
-        int br;
 		Scanner input = new Scanner(System.in);
         System.out.println("Unesite broj [1-Tablete/2-Kapsule/3-Sirup/4-Prah]: ");
-        String myString = input.next();
-        switch(myString)
+        int br = input.nextInt();
+        switch(br)
         {
         case 1:
-            oblik = Tablete;
+            oblik = lekOblici.Tablete;
             break;
         case 2:
-            oblik = Kapsule;
+            oblik = lekOblici.Kapsule;
             break;
         case 3:
-            oblik = Sirup;
+            oblik = lekOblici.Sirup;
             break;
         case 4:
-            oblik = Prah;
+            oblik = lekOblici.Prah;
             break;
         }
+        input.close();
         }
         void setUzimanjaNaDan(int UZIMANJANADAN) {this.uzimanjaNaDan = UZIMANJANADAN;}
         void setMoguDeca(boolean MOGUDECA) {this.moguDeca = MOGUDECA;}
