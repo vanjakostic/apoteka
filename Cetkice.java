@@ -8,12 +8,12 @@ public class Cetkice extends Proizvod {
 	private boolean elektricna;
 	private int brojupakovanju;
 	
-	Cetkice(String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
+	Cetkice(int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
 			String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
 			Boje bojacetkice, boolean elektricna, int brojupakovanju){
 		
 		
-		super(naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+		super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
 		this.bojacetkice=bojacetkice;
 		this.elektricna=elektricna;
 		this.brojupakovanju=brojupakovanju;

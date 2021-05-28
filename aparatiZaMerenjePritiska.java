@@ -2,7 +2,7 @@ package apoteka;
 
 enum tipAparataZaMerenjePritiska {ZA_ZGLOB, ZA_NADLAKTICU}
 
-class aparatiZaMerenjePritiska extends Proizvod
+class AparatiZaMerenjePritiska extends Proizvod
 {
 tipAparataZaMerenjePritiska tip;
 boolean detektorAritmije;
@@ -17,7 +17,7 @@ boolean datumIVreme;
 boolean automatskoUkljucivanje;
 boolean automatskoIskljucivanje;
 
-aparatiZaMerenjePritiska(String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
+AparatiZaMerenjePritiska(int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
 		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
 		tipAparataZaMerenjePritiska tip, boolean detektorAritmije, int memorijaRezultata,
 		boolean indikatorZaPravilnoPostavljanjeManzetne, boolean glasovnaFunkcija, boolean indikatorHipertenzije, 
@@ -26,7 +26,7 @@ aparatiZaMerenjePritiska(String naziv, Proizvodjaci proizvodjac, String datumPro
 {
 	
 	
-	super(naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+	super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
 	this.tip = tip;
 	this.detektorAritmije = detektorAritmije;
 	this.memorijaRezultata = memorijaRezultata;
@@ -82,7 +82,7 @@ public String toString() {
     "\n" + indikatorIstrosenostiBaterije +
     "\n" + datumIVreme +
     "\n" + automatskoIskljucivanje +
-    "\n" + automatskoUkljucivanje +
+    "\n" + automatskoUkljucivanje 
     
     ;
 }

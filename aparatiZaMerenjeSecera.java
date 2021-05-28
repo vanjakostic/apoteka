@@ -9,14 +9,14 @@ double potrebnaKolicinaKrvi; //ml
 int brojElektroda;
 int kapacitetMemorije;
 
-aparatiZaMerenjeSecera(String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
+aparatiZaMerenjeSecera(int id,String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
 		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
 		int brojTestTraka, int brojLanceta, int brzinaRezultata, double potrebnaKolicinaKrvi,
 		int brojElektroda, int kapacitetMemorije)
 {
 	
 	
-	super(naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+	super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
 	this.brojTestTraka = brojTestTraka;
 	this.brojLanceta = brojLanceta;
 	this.brzinaRezultata = brzinaRezultata;

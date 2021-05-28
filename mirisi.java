@@ -25,14 +25,14 @@ smoleNote smole;
 zivotinjskeKomponente zivotinjske;
 napiciNote napici;
 
-mirisi(String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
+mirisi(int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
 		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
 		boolean vegan, boolean prirodno, boolean organsko,
 		vrstaMirisa vrsta, citrusneNote citrusne, vocneNote vocne, cvetneNote cvetne, zeleneNote zelene,
 		slatkeNote slatke, drveneNote drvene, smoleNote smole, zivotinjskeKomponente zivotinjske, napiciNote napici)
 {
 	
-	super(naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda, vegan, prirodno, organsko);
+	super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda, vegan, prirodno, organsko);
     this.vrsta = vrsta;
     this.citrusne = citrusne;
     this.vocne = vocne;

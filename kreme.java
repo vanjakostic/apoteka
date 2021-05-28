@@ -1,6 +1,6 @@
-package Kozmetika;
+package apoteka;
 
-import apoteka.Proizvodjaci;
+
 
 enum kremaDeoTela {TELO, LICE, VISENAMENSKA, RUKE}
 enum kremaTipKoze {ZRELA, MLADA, SVITIPOVI}
@@ -14,13 +14,13 @@ kremaBaza baza;
 boolean SPF;
 
 
-kreme(String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
+kreme(int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
 		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
 		boolean vegan, boolean prirodno, boolean organsko,
 		kremaDeoTela deoTela, kremaTipKoze tipKoze, kremaBaza baza, boolean SPF)
 {
 	
-	super(naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda, vegan, prirodno, organsko);
+	super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda, vegan, prirodno, organsko);
 	this.deoTela = deoTela;
 	this.tipKoze = tipKoze;
 	this.baza = baza;
