@@ -1,9 +1,11 @@
 package apoteka;
+import java.util.Objects; 
 
 enum Proizvodjaci { COLGATE, SENSODYNE, NIVEA, MIXA, GARNIER, EUCERIN, MAYBELLINE, GOLDEN_ROSE, GALENIKA, HEMOFARM, FARMASWISS}
 
 public class Proizvod {
 	
+	protected int id;
 	protected String naziv;
 	protected Proizvodjaci proizvodjac;
 	protected String datumProizvodnje;
@@ -16,11 +18,12 @@ public class Proizvod {
 	
 	//konstruktor sa parametrima
 	
-	Proizvod(String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
+	Proizvod(int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
 			String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda){
 		
+		this.id = id;
 		this.naziv=naziv;
-		this.proizvodjac=proizvodjac;
+		this.proizvodjac = proizvodjac;
 		this.datumProizvodnje=datumProizvodnje;
 		this.rokTrajanja=rokTrajanja;
 		this.mestoProizvodnje=mestoProizvodnje;
@@ -33,6 +36,7 @@ public class Proizvod {
 	
 	//geteri
 	
+	int getID() {return this.id;}
 	String getNaziv() {return naziv; }
 	Proizvodjaci getProizvodjac() {	return proizvodjac; }
 	String getDatumProizvodnje() {return datumProizvodnje; }
@@ -46,6 +50,7 @@ public class Proizvod {
 	//seteri
 	//{}
 	
+	void setID(int id) {this.id=id;}
 	void setNaziv(String naziv) {this.naziv=naziv; }
 	void setProizvodjac(Proizvodjaci proizvodjac){this.proizvodjac=proizvodjac; }
 	void setDatumProizvodnje(String datumProizvodnje) {this.datumProizvodnje=datumProizvodnje; }
@@ -92,4 +97,40 @@ public class Proizvod {
         return naziv + "\n" + datumProizvodnje + "\n" + rokTrajanja + "\n" + mestoProizvodnje + "\n" ;
     }
 	
+	@Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 29 * hash + Objects.hashCode(this.id);
+        hash = 29 * hash + Objects.hashCode(this.naziv);
+        hash = 29 * hash + Objects.hashCode(this.cena);
+        hash = 29 * hash + Objects.hashCode(this.dostupan);
+        return hash;
+    }
+	
+	@Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Proizvod other = (Proizvod) obj;
+        if (!Objects.equals(this.naziv, other.naziv)) {
+            return false;
+        }
+        if (!Objects.equals(this.id, other.id)) {
+            return false;
+        }
+        if (!Objects.equals(this.cena, other.cena)) {
+            return false;
+        }
+        if (!Objects.equals(this.dostupan, other.dostupan)) {
+            return false;
+        }
+        return true;
+    }
 }

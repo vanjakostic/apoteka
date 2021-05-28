@@ -11,11 +11,11 @@ public class Rastvor extends Proizvod {
 	private boolean jacanjeDesni;
 
 	
-	public Rastvor (String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
+	public Rastvor (int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
 			String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
 			Ukus ukusrastvora, boolean izbeljuje, boolean gutanjeOpasno, boolean jacanjeDesni) {
 		
-		super(naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+		super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
 		this.ukusrastvora=ukusrastvora;
 		this.izbeljuje=izbeljuje;
 		this.gutanjeOpasno=gutanjeOpasno;

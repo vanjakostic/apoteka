@@ -1,12 +1,12 @@
-package aparati;
+package apoteka;
 
-import apoteka.Proizvodjaci;
-import apoteka.proizvod;
+
+
 
 enum tipToplomera {DIGITALNI, BESKONTAKTNI, ZIVA}
 enum tipMerenja {ORALNO, REKTALNO, AKSILARNO}
 
-class toplomeri extends proizvod
+class toplomeri extends Proizvod
 {
 tipToplomera tipToplomera;
 boolean memorisePoslednjuTemperaturu;
@@ -17,14 +17,14 @@ int maxTemp;
 tipMerenja tipMerenja;
 boolean vodootporan;
 
-toplomeri(String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
+toplomeri(int id,String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
 		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
 		tipToplomera tipToplomera, boolean memorisePoslednjuTemperaturu, boolean automatskoUkljucivanje,
 		boolean automatskoIskljucivanje,  int minTemp, int maxTemp,
 		tipMerenja tipMerenja, boolean vodootporan)
 {
 	
-	super(naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+	super(id,naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
 	this.tipToplomera = tipToplomera;
 	this.memorisePoslednjuTemperaturu = memorisePoslednjuTemperaturu;
 	this.automatskoUkljucivanje = automatskoUkljucivanje;        
@@ -55,7 +55,7 @@ void setVodootporan(boolean vodootporan) {this.vodootporan = vodootporan;}
 
 @Override 
 public String toString() {
-    return naziv + 
+     return naziv + 
     "\n" + datumProizvodnje +
     "\n" + rokTrajanja +
     "\n" + mestoProizvodnje +

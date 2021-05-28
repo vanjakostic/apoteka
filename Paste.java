@@ -13,13 +13,13 @@ public class Paste extends Proizvod{
     private boolean fluor;
     private boolean prirodna;
     
-    Paste(String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
+    Paste(int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
     		String mestoProizvodnje,
     		double cena, boolean dostupan,int brojproizvoda, vrstaPaste vrsta, ukusPaste ukus, int kolicina,
     		float ppmF, boolean fluor, boolean prirodna){
     	
     	
-    	super(naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+    	super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
     	this.vrsta=vrsta;
     	this.ukus=ukus;
     	this.kolicina=kolicina;

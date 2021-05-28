@@ -14,13 +14,13 @@ boolean automatskoIskljucivanje;
 boolean LEDdisplay;
 boolean indikatorNapunjenostiBaterije;
 
-vage(String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
+vage(int id,String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
 		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
 		tipVage tip, jedinicaMere jedinica, int maxTezina, boolean automatskoUkljucivanje,
 		boolean automatskoIskljucivanje, boolean LEDdisplay, boolean indikatorNapunjenostiBaterije)
 {
 	
-	super(naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+	super(id,naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
 	this.tip = tip;
 	this.jedinica = jedinica;
 	this.maxTezina = maxTezina;

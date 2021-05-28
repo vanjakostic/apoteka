@@ -10,12 +10,12 @@ int brojTestPlocica;
 int brojPipeta;
 
 
-testoviZaTrudnocu(String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
+testoviZaTrudnocu(int id,String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
 		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
 		int osetljivost, double tacnost, int brojDanaOdZaceca, int brzina, int brojTestPlocica, int brojPipeta)
 {
 	
-	super(naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+	super(id,naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
 	this.osetljivost = osetljivost;
 	this.tacnost = tacnost;
 	this.brojDanaOdZaceca = brojDanaOdZaceca;
