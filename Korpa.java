@@ -47,4 +47,12 @@ public class Korpa {
 			
 		}
 
+	void ispisArtikala(List<Proizvod> korpa) {
+		
+	    for (int i = 0; i < korpa.size();i++) 
+	    { 		      
+	        System.out.println(korpa.get(i)); 		
+	    }   
+
+	}
 }
