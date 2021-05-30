@@ -41,7 +41,7 @@ public class Kasa {
 	/*void dodajUFajl(Korpa &k){
 		try {
 		    FileWriter f = new FileWriter("baza.txt", true);
-		    f.write(k.ispis);
+		    f.write(k.ispisArtikala);
 
 		}
 		catch(FileNotFoundException | IOException e) {
