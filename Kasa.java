@@ -33,32 +33,27 @@ public class Kasa {
 		
 	}
 	
-	 /*void ispisRacuna(ArrayList<Korpa> spisakRacuna) {
-		
-		for (int i = 0; i < spisakRacuna.size();i++) 
-	    { 		      
-			
-			for (int j = 0; j < spisakRacuna.get(i).size(); j++) {
-	            ispisArtikala();
-	        } 		
-	    }   
-	}*/
 	
 	
 	//ide u main
-	/*try {
-		
-	      FileWriter f = new FileWriter("baza.txt");
-	      f.write(ispisRacuna();
-	      
-	    } catch (IOException e) {
-	      System.out.println("error");
-	      e.printStackTrace();
-	    }finally {
-	    	
-	    	f.close();
-	    	
-	    }*/
+	//import java.io.FileWriter;
+	//import java.io.IOException;
+	/*void dodajUFajl(Korpa &k){
+		try {
+		    FileWriter f = new FileWriter("baza.txt", true);
+		    f.write(k.ispis);
+
+		}
+		catch(FileNotFoundException | IOException e) {
+			System.out.println("Greska ");
+
+		}
+		finally{
+			if (f != null) f.close();
+		}
+	}
+	
+	*/
 	
 	
 	 
