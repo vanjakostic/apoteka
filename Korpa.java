@@ -31,26 +31,17 @@ public class Korpa {
 		}
 	}
 	
-	void ukloniSveSaRacuna(List<Proizvod> listaArtikala) {
+	void ukloniSveIzKorpe(List<Proizvod> listaArtikala) {
 		
 		if(!listaArtikala.isEmpty()) {
 			listaArtikala.clear();
-		}
-		
+		}	
 	}
 	
-	void ukloniSve(List<Proizvod> korpa) {
-			
-			if(!korpa.isEmpty()) {
-				korpa.clear();
-			}
-			
-		}
 
 	void ispisArtikala(List<Proizvod> korpa) {
 		
-	    for (int i = 0; i < korpa.size();i++) 
-	    { 		      
+	    for (int i = 0; i < korpa.size();i++) { 		      
 	        System.out.println(korpa.get(i)); 		
 	    }   
 
