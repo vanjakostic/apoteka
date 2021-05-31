@@ -1,4 +1,4 @@
-package apoteka;
+
 
 enum vrstaMirisa {PARFEM, TOALETNA_VODA, KOLONJSKA_VODA}
 enum citrusneNote {NISTA, NARANDZA, LIMUN, MANDARINA, TANGERINA, KUMKVAT, LIMUNSKA_TRAVA, POMELO}
@@ -25,14 +25,13 @@ smoleNote smole;
 zivotinjskeKomponente zivotinjske;
 napiciNote napici;
 
-mirisi(int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
+mirisi(int id, String naziv, double cena,int  dostupan, 
 		boolean vegan, boolean prirodno, boolean organsko,
 		vrstaMirisa vrsta, citrusneNote citrusne, vocneNote vocne, cvetneNote cvetne, zeleneNote zelene,
 		slatkeNote slatke, drveneNote drvene, smoleNote smole, zivotinjskeKomponente zivotinjske, napiciNote napici)
 {
 	
-	super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda, vegan, prirodno, organsko);
+	super(id, naziv,cena,dostupan, vegan, prirodno, organsko);
     this.vrsta = vrsta;
     this.citrusne = citrusne;
     this.vocne = vocne;

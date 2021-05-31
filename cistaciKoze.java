@@ -1,4 +1,4 @@
-package apoteka;
+
 
 
 enum vrstaCistaca {ULJE, GEL}
@@ -9,13 +9,12 @@ class cistaciKoze extends kozmetika
 vrstaCistaca vrsta;
 aktivniSastojak sastojak;
 
-cistaciKoze(int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
+cistaciKoze(int id, String naziv, double cena, int dostupan, 
 		boolean vegan, boolean prirodno, boolean organsko,
 		vrstaCistaca vrsta, aktivniSastojak sastojak)
 {
 	
-	super(id,naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda, vegan, prirodno, organsko);
+	super(id,naziv,cena,dostupan, vegan, prirodno, organsko);
     this.vrsta = vrsta;
     this.sastojak = sastojak;
 
@@ -29,9 +28,6 @@ void setSastojak(aktivniSastojak sastojak) {this.sastojak = sastojak;}
 @Override 
 public String toString() {
     return naziv + 
-    "\n" + datumProizvodnje +
-    "\n" + rokTrajanja +
-    "\n" + mestoProizvodnje +
     "\n" + vrsta +
     "\n" + sastojak 
     ;

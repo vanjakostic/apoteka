@@ -1,4 +1,4 @@
-package apoteka;
+
 
 
 public class Rastvor extends Proizvod {
@@ -11,11 +11,10 @@ public class Rastvor extends Proizvod {
 	private boolean jacanjeDesni;
 
 	
-	public Rastvor (int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-			String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
+	public Rastvor (int id, String naziv, double cena, int dostupan, 
 			Ukus ukusrastvora, boolean izbeljuje, boolean gutanjeOpasno, boolean jacanjeDesni) {
 		
-		super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+		super(id, naziv,cena,dostupan);
 		this.ukusrastvora=ukusrastvora;
 		this.izbeljuje=izbeljuje;
 		this.gutanjeOpasno=gutanjeOpasno;

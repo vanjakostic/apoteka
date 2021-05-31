@@ -1,4 +1,3 @@
-package apoteka;
 
 public class Paste extends Proizvod{
 
@@ -13,13 +12,12 @@ public class Paste extends Proizvod{
     private boolean fluor;
     private boolean prirodna;
     
-    Paste(int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-    		String mestoProizvodnje,
-    		double cena, boolean dostupan,int brojproizvoda, vrstaPaste vrsta, ukusPaste ukus, int kolicina,
+    Paste(int id, String naziv, 
+    		double cena, int dostupan, vrstaPaste vrsta, ukusPaste ukus, int kolicina,
     		float ppmF, boolean fluor, boolean prirodna){
     	
     	
-    	super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+    	super(id, naziv,cena,dostupan);
     	this.vrsta=vrsta;
     	this.ukus=ukus;
     	this.kolicina=kolicina;

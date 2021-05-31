@@ -1,4 +1,4 @@
-package apoteka;
+
 
 
 
@@ -12,13 +12,12 @@ boolean protivOpadanja;
 boolean brziRast;;
 int kolicina; //ml
 
-negaKose(int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
+negaKose(int id, String naziv, double cena, int dostupan, 
 		boolean vegan, boolean prirodno, boolean organsko,
 		negaKoseNamena namena, boolean protivPeruti, boolean protivOpadanja, boolean brziRast, int kolicina)
 {
 	
-	super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda, vegan, prirodno, organsko);
+	super(id, naziv,cena,dostupan, vegan, prirodno, organsko);
 	this.namena = namena;
 	this.protivPeruti = protivPeruti;
 	this.protivOpadanja = protivOpadanja;

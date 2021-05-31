@@ -1,4 +1,4 @@
-package apoteka;
+
 
 class aparatiZaMerenjeSecera extends Proizvod
 {
@@ -9,14 +9,13 @@ double potrebnaKolicinaKrvi; //ml
 int brojElektroda;
 int kapacitetMemorije;
 
-aparatiZaMerenjeSecera(int id,String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
+aparatiZaMerenjeSecera(int id,String naziv, double cena, int dostupan, 
 		int brojTestTraka, int brojLanceta, int brzinaRezultata, double potrebnaKolicinaKrvi,
 		int brojElektroda, int kapacitetMemorije)
 {
 	
 	
-	super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+	super(id, naziv,cena,dostupan);
 	this.brojTestTraka = brojTestTraka;
 	this.brojLanceta = brojLanceta;
 	this.brzinaRezultata = brzinaRezultata;
@@ -42,9 +41,6 @@ void setKapacitetMemorije(int kapacitetMemorije) {this.kapacitetMemorije = kapac
 @Override 
 public String toString() {
     return naziv + 
-    "\n" + datumProizvodnje +
-    "\n" + rokTrajanja +
-    "\n" + mestoProizvodnje +
     "\n" + brojTestTraka +
     "\n" + brojLanceta +
     "\n" + brzinaRezultata +

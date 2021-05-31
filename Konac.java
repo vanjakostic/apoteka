@@ -1,15 +1,14 @@
-package apoteka;
+
 
 public class Konac extends Proizvod{
 	
 	private float duzina;
     private boolean waxed, ptfe, ukuskonca;
     
-    Konac(int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-			String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda, float duzina, boolean waxed,
+    Konac(int id, String naziv, double cena,int dostupan, float duzina, boolean waxed,
 			boolean ptfe, boolean ukuskonca){
     	
-    	super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+    	super(id, naziv,cena,dostupan);
     	this.duzina=duzina;
     	this.waxed=waxed;
     	this.ptfe=ptfe;

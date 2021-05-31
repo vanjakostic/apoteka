@@ -1,4 +1,3 @@
-package apoteka;
 
 class kozmetika extends Proizvod
 {
@@ -6,12 +5,11 @@ boolean vegan;
 boolean prirodno;
 boolean organsko;
 
-kozmetika(int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
+kozmetika(int id, String naziv, double cena, int dostupan, 
 		boolean vegan, boolean prirodno, boolean organsko)
 {
 	
-	super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+	super(id, naziv,cena,dostupan);
 	this.vegan = vegan;
 	this.prirodno = prirodno;
 	this.organsko = organsko;

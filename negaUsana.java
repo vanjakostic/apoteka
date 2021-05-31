@@ -1,4 +1,4 @@
-package apoteka;
+
 
 
 
@@ -9,13 +9,12 @@ class negaUsana extends kozmetika
 negaUsanaNamena namena;
 String boja;
 
-negaUsana(int id,String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
+negaUsana(int id,String naziv,  double cena, int dostupan,
 		boolean vegan, boolean prirodno, boolean organsko,
 		negaUsanaNamena namena, String boja)
 {
 	
-	super(id,naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda, vegan, prirodno, organsko);
+	super(id,naziv,cena,dostupan, vegan, prirodno, organsko);
 	this.namena = namena;
 	this.boja = boja;
 

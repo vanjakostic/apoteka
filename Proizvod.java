@@ -1,36 +1,25 @@
-package apoteka;
+
+
 import java.util.Objects; 
 
-enum Proizvodjaci { COLGATE, SENSODYNE, NIVEA, MIXA, GARNIER, EUCERIN, MAYBELLINE, GOLDEN_ROSE, GALENIKA, HEMOFARM, FARMASWISS}
+
 
 public class Proizvod {
 	
 	protected int id;
 	protected String naziv;
-	protected Proizvodjaci proizvodjac;
-	protected String datumProizvodnje;
-	protected String rokTrajanja;
-	protected String mestoProizvodnje;
 	protected double cena;
-	protected boolean dostupan;
-	protected int brojproizvoda;
+	protected int dostupan;
 	
 	
 	//konstruktor sa parametrima
 	
-	Proizvod(int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-			String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda){
+	Proizvod(int id, String naziv, double cena, int dostupan){
 		
 		this.id = id;
 		this.naziv=naziv;
-		this.proizvodjac = proizvodjac;
-		this.datumProizvodnje=datumProizvodnje;
-		this.rokTrajanja=rokTrajanja;
-		this.mestoProizvodnje=mestoProizvodnje;
 		this.cena=cena;
 		this.dostupan=dostupan;
-		this.brojproizvoda=brojproizvoda;
-		
 		
 	}
 	
@@ -38,13 +27,8 @@ public class Proizvod {
 	
 	int getID() {return this.id;}
 	String getNaziv() {return naziv; }
-	Proizvodjaci getProizvodjac() {	return proizvodjac; }
-	String getDatumProizvodnje() {return datumProizvodnje; }
-	String getRokTrajanja() {return rokTrajanja; }
-	String getMestoProizvodnje() {return mestoProizvodnje; }
 	double getCena(){return cena; }
-	boolean getDostupan(){return dostupan; }
-	int getBrojproizvoda() {return brojproizvoda; }
+	int getDostupan(){return dostupan; }
 
 	
 	//seteri
@@ -52,21 +36,17 @@ public class Proizvod {
 	
 	void setID(int id) {this.id=id;}
 	void setNaziv(String naziv) {this.naziv=naziv; }
-	void setProizvodjac(Proizvodjaci proizvodjac){this.proizvodjac=proizvodjac; }
-	void setDatumProizvodnje(String datumProizvodnje) {this.datumProizvodnje=datumProizvodnje; }
-	void setRokTrajanja(String rokTrajanja) {this.rokTrajanja=rokTrajanja; }
-	void setMestoProizvodnje(String mestoProizvodnje) {this.mestoProizvodnje=mestoProizvodnje; }
 	void setCena(double cena){
 		
 		if(cena > 0)
 			this.cena=cena; 
 		
 	}
-	void setDostupan(boolean dostupan){this.dostupan=dostupan; }
-	void setBrojproizvoda(int brojproizvoda) {this.brojproizvoda=brojproizvoda; }
+	void setDostupan(int dostupan){this.dostupan=dostupan; }
+
 	
 	
-	//potrosi proizvode
+/*
 	
 	 boolean potrosi(){
 	        if(brojproizvoda>=20){
@@ -80,7 +60,7 @@ public class Proizvod {
 	        return false;
 	  }
 	 
-	 //poruci proizvode
+
 	 
 	 void naruci(){
 		 brojproizvoda+=20;
@@ -89,13 +69,13 @@ public class Proizvod {
 			 dostupan=true;
 	        
 	  }
-	 
+	 */
 	 
 	
-	@Override 
+	/*@Override 
 	public String toString() {
         return naziv + "\n" + datumProizvodnje + "\n" + rokTrajanja + "\n" + mestoProizvodnje + "\n" ;
-    }
+    }*/
 	
 	@Override
     public int hashCode() {

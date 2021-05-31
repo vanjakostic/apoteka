@@ -1,4 +1,4 @@
-package apoteka;
+
 
 class Prehlada extends Lek 
 {
@@ -27,13 +27,11 @@ class Prehlada extends Lek
 		    glavobolja = true;
         }*/
 
-        Prehlada(int ID, String NAZIV, Proizvodjaci PROIZVODJAC, String DATUMPROIZVODNJE,
-        	String ROKTRAJANJA, String MESTOPROIZVODNJE, double CENA, boolean DOSTUPAN, int BROJPROIZVODA,
+        Prehlada(int ID, String NAZIV,  double CENA, int DOSTUPAN, 
             lekOblici OBLIK, int UZIMANJANADAN, boolean MOGUDECA, boolean MOGUTRUDNICE, boolean MOGUDIJABETICARI, boolean KASALJ,
 			boolean CURENJENOSA, boolean ZAPUSENNOS, boolean TEMPERATURA, boolean BOLUGRLU, boolean KIJANJE, boolean GLAVOBOLJA)
         {
-        super(ID, NAZIV, PROIZVODJAC, DATUMPROIZVODNJE, ROKTRAJANJA, MESTOPROIZVODNJE,  CENA,  DOSTUPAN, 
-        	 BROJPROIZVODA, OBLIK,  UZIMANJANADAN, MOGUDECA,  MOGUTRUDNICE,  MOGUDIJABETICARI);
+        super(ID, NAZIV,  CENA,  DOSTUPAN, OBLIK,  UZIMANJANADAN, MOGUDECA,  MOGUTRUDNICE,  MOGUDIJABETICARI);
         oblik = OBLIK;
         uzimanjaNaDan = UZIMANJANADAN;
         moguDeca = MOGUDECA;

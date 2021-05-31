@@ -1,4 +1,4 @@
-package apoteka;
+
 
 enum tipAparataZaMerenjePritiska {ZA_ZGLOB, ZA_NADLAKTICU}
 
@@ -17,8 +17,7 @@ boolean datumIVreme;
 boolean automatskoUkljucivanje;
 boolean automatskoIskljucivanje;
 
-AparatiZaMerenjePritiska(int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
+AparatiZaMerenjePritiska(int id, String naziv, double cena, int dostupan, 
 		tipAparataZaMerenjePritiska tip, boolean detektorAritmije, int memorijaRezultata,
 		boolean indikatorZaPravilnoPostavljanjeManzetne, boolean glasovnaFunkcija, boolean indikatorHipertenzije, 
 		boolean detektorPokreta, boolean bluetoothFunkcija, boolean indikatorIstrosenostiBaterije,
@@ -26,7 +25,7 @@ AparatiZaMerenjePritiska(int id, String naziv, Proizvodjaci proizvodjac, String 
 {
 	
 	
-	super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+	super(id, naziv,cena,dostupan);
 	this.tip = tip;
 	this.detektorAritmije = detektorAritmije;
 	this.memorijaRezultata = memorijaRezultata;
@@ -69,9 +68,6 @@ void setAutomatskoIskljucivanje(boolean automatskoIskljucivanje) {this.automatsk
 @Override 
 public String toString() {
     return naziv + 
-    "\n" + datumProizvodnje +
-    "\n" + rokTrajanja +
-    "\n" + mestoProizvodnje +
     "\n" + tip +
     "\n" + detektorAritmije +
     "\n" + memorijaRezultata +

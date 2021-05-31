@@ -1,49 +1,40 @@
+import java.util.ArrayList;
 import java.util.List;
-package apoteka;
-import java.util.*;
 
-public class Korpa {
-	
-	List<Proizvod> listaArtikala;
-	
-	
-	
-	double izracunajIznos(List<Proizvod> listaArtikala) {
-		
-		double iznos=0;
-		for(int i=0; i<listaArtikala.length; i++) {
-			
-			//iznos+=listaArtikala.cena.get(i);
-			
-		}
-		
-	}
-	
-	void dodajUKorpu(Proizvod p,List<Proizvod> listaArtikala) {
-		listaArtikala.add(p);
-		
-	}
-	
-	void ukloniIzKorpe(Proizvod p,List<Proizvod> listaArtikala) {
-		
-		if(!listaArtikala.isEmpty()) {
-			listaArtikala.remove(p);
-		}
-	}
-	
-	void ukloniSveIzKorpe(List<Proizvod> listaArtikala) {
-		
-		if(!listaArtikala.isEmpty()) {
-			listaArtikala.clear();
-		}	
-	}
-	
+class Korpa {
 
-	void ispisArtikala(List<Proizvod> korpa) {
-		
-	    for (int i = 0; i < korpa.size();i++) { 		      
-	        System.out.println(korpa.get(i)); 		
-	    }   
+    List<Proizvod> cartItems = new ArrayList<Proizvod>();
+    
+    public void dodajUKorpuID(int id) {
+        Proizvod proizvod = getProizvodPoID(id);
+        dodajUKorpu(proizvod);
+    }
 
-	}
+    private Proizvod getProizvodPoID(int id) {
+        Proizvod proizvod = null;
+        List<Proizvod> listaProizvoda = new sviProizvodi().getProizvode();
+        for (Proizvod prod: listaProizvoda) {
+            if (prod.getID() == id) {
+                proizvod = prod;
+                break;
+            }
+        }
+        return proizvod;
+    }
+
+    private void dodajUKorpu(Proizvod proizvod) {
+        cartItems.add(proizvod);
+    }
+
+    public void ukloniProizvodID(int id) {
+        Proizvod prod = getProizvodPoID(id);
+        cartItems.remove(prod);
+    }
+
+    void printProizvodeUKorpi() {
+        for (Proizvod prod: cartItems) {
+            System.out.println(prod.getNaziv());
+        }
+    }
+    
 }

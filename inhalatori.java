@@ -1,4 +1,4 @@
-package apoteka;
+
 
 
 enum tipInhalatora {KOMPRESORSKI, ULTRAZVUCNI}
@@ -17,13 +17,12 @@ double snaga; // watt
 double tezina; //kg
 int nivoBuke; // Db
 
-inhalatori(int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
+inhalatori(int id, String naziv, double cena, int dostupan,
 		tipInhalatora tip, bojeInhalatora boje, int duzinaCrevaZaVazduh, int brojFilteraZaVazduh, boolean nazalniTus,
 		double protokVazduha, double frekvencija, double snaga, double tezina, int nivoBuke)
 {
 	
-	super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+	super(id, naziv,cena,dostupan);
 	this.tip = tip;
 	this.boje = boje;
 	this.duzinaCrevaZaVazduh = duzinaCrevaZaVazduh;
@@ -61,9 +60,6 @@ void setNivoBuke(int nivoBuke) {this.nivoBuke = nivoBuke;}
 @Override 
 public String toString() {
     return naziv + 
-    "\n" + datumProizvodnje +
-    "\n" + rokTrajanja +
-    "\n" + mestoProizvodnje +
     "\n" + tip +
     "\n" + boje +
     "\n" + duzinaCrevaZaVazduh +

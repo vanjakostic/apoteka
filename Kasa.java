@@ -1,19 +1,19 @@
-package apoteka;
 
-import java.util.ArrayList;
-import java.util.List;
+
+
+
 
 public class Kasa {
 
 	private double trenutnostanje;
-	private ArrayList<Korpa> spisakRacuna;
+	
 	
 	
 	Kasa(double trenutnostanje){ this.trenutnostanje=trenutnostanje; }
 	
 	double getTrenutnostanje() {return trenutnostanje; }
 	
-	void Prodaj(Korpa k,ArrayList<Korpa> spisakRacuna) {
+	/*void Prodaj(Korpa k,ArrayList<Korpa> spisakRacuna) {
 		spisakRacuna.add(k);
 		
 	}
@@ -33,7 +33,7 @@ public class Kasa {
 		
 	}
 	
-	
+	*/
 	
 	//ide u main
 	//import java.io.FileWriter;

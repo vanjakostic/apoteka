@@ -1,4 +1,4 @@
-package apoteka;
+
 
 
 enum negaNoktijuNamena {LAK, GEL}
@@ -9,13 +9,12 @@ class negaNoktiju extends kozmetika
 negaNoktijuNamena namena;
 bojaNokti boja;
 
-negaNoktiju(int id,String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
+negaNoktiju(int id,String naziv,  double cena, int dostupan, 
 		boolean vegan, boolean prirodno, boolean organsko,
 		negaNoktijuNamena namena, bojaNokti boja)
 {
 	
-	super(id,naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda, vegan, prirodno, organsko);
+	super(id,naziv,cena,dostupan,vegan, prirodno, organsko);
 	this.namena = namena;
 	this.boja = boja;
 
