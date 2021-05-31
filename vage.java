@@ -1,4 +1,3 @@
-package apoteka;
 
 enum tipVage {MEHANICKA, DIGITALNA};
 enum jedinicaMere {KG, LB}
@@ -14,13 +13,12 @@ boolean automatskoIskljucivanje;
 boolean LEDdisplay;
 boolean indikatorNapunjenostiBaterije;
 
-vage(int id,String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
+vage(int id,String naziv, double cena, int dostupan, 
 		tipVage tip, jedinicaMere jedinica, int maxTezina, boolean automatskoUkljucivanje,
 		boolean automatskoIskljucivanje, boolean LEDdisplay, boolean indikatorNapunjenostiBaterije)
 {
 	
-	super(id,naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+	super(id,naziv,cena,dostupan);
 	this.tip = tip;
 	this.jedinica = jedinica;
 	this.maxTezina = maxTezina;
@@ -51,9 +49,6 @@ void setIndikatorNapunjenostiBaterije(boolean indikatorNapunjenostiBaterije) {th
 @Override 
 public String toString() {
     return naziv + 
-    "\n" + datumProizvodnje +
-    "\n" + rokTrajanja +
-    "\n" + mestoProizvodnje +
     "\n" + tip +
     "\n" + jedinica +
     "\n" + maxTezina +

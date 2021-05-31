@@ -1,4 +1,4 @@
-package apoteka;
+
 
 
 
@@ -8,13 +8,12 @@ class sheetMaske extends kozmetika
 {
 materijalMaske materijal;
 
-sheetMaske(int id,String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
+sheetMaske(int id,String naziv, double cena, int dostupan, 
 		boolean vegan, boolean prirodno, boolean organsko,
 		materijalMaske materijal)
 {
 	
-	super(id,naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda, vegan, prirodno, organsko);
+	super(id,naziv,cena,dostupan, vegan, prirodno, organsko);
 	this.materijal = materijal;
 }
 

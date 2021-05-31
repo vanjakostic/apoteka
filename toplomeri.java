@@ -1,4 +1,4 @@
-package apoteka;
+
 
 
 
@@ -17,14 +17,13 @@ int maxTemp;
 tipMerenja tipMerenja;
 boolean vodootporan;
 
-toplomeri(int id,String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
+toplomeri(int id,String naziv, double cena, int dostupan, 
 		tipToplomera tipToplomera, boolean memorisePoslednjuTemperaturu, boolean automatskoUkljucivanje,
 		boolean automatskoIskljucivanje,  int minTemp, int maxTemp,
 		tipMerenja tipMerenja, boolean vodootporan)
 {
 	
-	super(id,naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+	super(id,naziv,cena,dostupan);
 	this.tipToplomera = tipToplomera;
 	this.memorisePoslednjuTemperaturu = memorisePoslednjuTemperaturu;
 	this.automatskoUkljucivanje = automatskoUkljucivanje;        
@@ -56,9 +55,6 @@ void setVodootporan(boolean vodootporan) {this.vodootporan = vodootporan;}
 @Override 
 public String toString() {
      return naziv + 
-    "\n" + datumProizvodnje +
-    "\n" + rokTrajanja +
-    "\n" + mestoProizvodnje +
     "\n" + tipToplomera +
     "\n" + memorisePoslednjuTemperaturu +
     "\n" + automatskoUkljucivanje +

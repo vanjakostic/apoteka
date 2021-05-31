@@ -1,6 +1,3 @@
-package apoteka;
-
-
 enum zastitaOdSuncaOblik {LOSION, GEL, SPREJ, STIK}
 enum zastitaOdSuncaTip {MINERALNA, HEMIJSKA}
 
@@ -11,13 +8,12 @@ zastitaOdSuncaOblik oblik;
 zastitaOdSuncaTip tip;
 
 
-zastitaOdSunca(int id,String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
+zastitaOdSunca(int id,String naziv, double cena, int dostupan,
 		boolean vegan, boolean prirodno, boolean organsko,
         int SPF, zastitaOdSuncaOblik oblik, zastitaOdSuncaTip tip)
 {
 	
-	super(id,naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda, vegan, prirodno, organsko);
+	super(id,naziv,cena,dostupan,vegan, prirodno, organsko);
 	this.SPF = SPF;
 	this.oblik = oblik;
 	this.tip = tip;

@@ -1,5 +1,3 @@
-package apoteka;
-
 
 enum serumNamena {ANTI_AGING, PROTIV_AKNI, POSVETLJIVANJE, HIDRIRANJE, REPARACIJA}
 enum glavniSastojak {HIJALURON, C_VITAMIN, KOLAGEN}
@@ -11,13 +9,12 @@ serumNamena namena;
 glavniSastojak sastojak;
 deoTela deo;
 
-serum(int id,String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
+serum(int id,String naziv, double cena, int dostupan, 
 		boolean vegan, boolean prirodno, boolean organsko,
 		serumNamena namena, glavniSastojak sastojak, deoTela deo)
 {
 	
-	super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda, vegan, prirodno, organsko);
+	super(id, naziv,cena,dostupan, vegan, prirodno, organsko);
 	this.namena = namena;
 	this.sastojak = sastojak;
 	this.deo = deo;

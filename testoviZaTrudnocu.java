@@ -1,4 +1,4 @@
-package apoteka;
+
 
 class testoviZaTrudnocu extends Proizvod
 {
@@ -10,12 +10,11 @@ int brojTestPlocica;
 int brojPipeta;
 
 
-testoviZaTrudnocu(int id,String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-		String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,
+testoviZaTrudnocu(int id,String naziv, double cena, int dostupan, 
 		int osetljivost, double tacnost, int brojDanaOdZaceca, int brzina, int brojTestPlocica, int brojPipeta)
 {
 	
-	super(id,naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+	super(id,naziv,cena,dostupan);
 	this.osetljivost = osetljivost;
 	this.tacnost = tacnost;
 	this.brojDanaOdZaceca = brojDanaOdZaceca;
@@ -41,9 +40,6 @@ void setBrojPipeta(int brojPipeta) {this.brojPipeta = brojPipeta;}
 @Override 
 public String toString() {
     return naziv + 
-    "\n" + datumProizvodnje +
-    "\n" + rokTrajanja +
-    "\n" + mestoProizvodnje +
     "\n" + osetljivost +
     "\n" + tacnost +
     "\n" + brojDanaOdZaceca +

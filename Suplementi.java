@@ -1,4 +1,4 @@
-package apoteka;
+
 
 public class Suplementi extends Proizvod{
 	
@@ -6,10 +6,9 @@ enum Vrstasuplementa {VITAMIN, MINERAL, ENZIM, AMINOKISELINA, PROTEIN}
 	
 	private Vrstasuplementa vrsta;
 	
-	Suplementi (int id, String naziv, Proizvodjaci proizvodjac, String datumProizvodnje, String rokTrajanja,
-			String mestoProizvodnje, double cena, boolean dostupan, int brojproizvoda,Vrstasuplementa vrsta){
+	Suplementi (int id, String naziv,double cena, int dostupan, Vrstasuplementa vrsta){
 		
-		super(id, naziv,proizvodjac,datumProizvodnje,rokTrajanja,mestoProizvodnje,cena,dostupan,brojproizvoda);
+		super(id, naziv,cena,dostupan);
 		this.vrsta=vrsta;
 	}
 
