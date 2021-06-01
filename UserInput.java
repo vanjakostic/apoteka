@@ -114,7 +114,7 @@ public class UserInput {
         
         for (Proizvod prod: korpa) {
             
-            t=k.getTrenutnostanje;
+            t=k.getTrenutnostanje();
             t+=prod.getCena();
             k.setTrenutnostanje(t);
       
