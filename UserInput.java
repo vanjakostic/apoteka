@@ -104,4 +104,14 @@ public class UserInput {
         int pid = getUserInput();
         korpa.ukloniProizvodID(pid);
     }
+    
+    
+    public void kupi(){
+    
+    
+    }
+    
+    
+    
+    
 }
