@@ -1,8 +1,8 @@
-
+enum Vrstasuplementa {VITAMIN, MINERAL, ENZIM, AMINOKISELINA, PROTEIN};
 
 public class Suplementi extends Proizvod{
 	
-enum Vrstasuplementa {VITAMIN, MINERAL, ENZIM, AMINOKISELINA, PROTEIN}
+
 	
 	private Vrstasuplementa vrsta;
 	
@@ -12,7 +12,11 @@ enum Vrstasuplementa {VITAMIN, MINERAL, ENZIM, AMINOKISELINA, PROTEIN}
 		this.vrsta=vrsta;
 	}
 
-	Vrstasuplementa getVrsta() {return vrsta;}
+	String getVrsta() 
+	{
+		return "Vitamin";
+	
+	}
 	
 	void setVrsta(Vrstasuplementa vrsta) {this.vrsta=vrsta; }
 	

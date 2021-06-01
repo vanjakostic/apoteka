@@ -10,10 +10,17 @@ public class UserInput {
         menu();
     }
     
+    public void dobrodoslica()
+    {
+    	System.out.println("******************************");
+    	System.out.println("DOBRODOSLI U APOTEKU");
+    	System.out.println("******************************");
+    }
     public void startScreen () {
         System.out.println("1. Prikazi proizvode u radnji");
         System.out.println("2. Prikazi korpu");
         System.out.println("0. Izadji");
+        System.out.println("------------------------------");
     }
     
     public void storeProductsMenu() {
@@ -24,6 +31,8 @@ public class UserInput {
     
     public void menu () {
         do {
+        	
+        	dobrodoslica();
             startScreen();
             getUserInput();
             
@@ -71,14 +80,16 @@ public class UserInput {
     private void displayStoreProducts() {
         List<Proizvod> listaProizvoda = new sviProizvodi().getProizvode();
         for (Proizvod prod: listaProizvoda) {
+        
             System.out.println(
                     prod.getID() + "- " +
                             prod.getNaziv() + " " +
                             prod.getCena() + " " +
                             prod.getDostupan()
             );
+        	}
         }
-    }
+    
 
     private void addProductToCart() {
         int pid = getUserInput();
