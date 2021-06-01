@@ -1,5 +1,8 @@
+package apoteka;
 import java.util.List;
 import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class UserInput {
 
@@ -27,6 +30,7 @@ public class UserInput {
         System.out.println("1. Dodaj u korpu");
         System.out.println("2. Ukloni iz korpe");
         System.out.println("0. Izadji");
+        System.out.println("------------------------------");
     }
     
     public void menu () {
@@ -56,7 +60,7 @@ public class UserInput {
         } while (ch != 0);
     }
 
-    private void innerChoice1() {
+    public void innerChoice1() {
         switch (ch) {
             case 1:
                 addProductToCart();
@@ -71,13 +75,13 @@ public class UserInput {
         }
     }
 
-    private int getUserInput() throws NumberFormatException {
+    public int getUserInput() throws NumberFormatException {
         Scanner in = new Scanner (System.in);
         ch = Integer.parseInt(in.nextLine());
         return ch;
     }
 
-    private void displayStoreProducts() {
+    public void displayStoreProducts() {
         List<Proizvod> listaProizvoda = new sviProizvodi().getProizvode();
         for (Proizvod prod: listaProizvoda) {
         
@@ -91,23 +95,48 @@ public class UserInput {
         }
     
 
-    private void addProductToCart() {
+    public void addProductToCart() {
         int pid = getUserInput();
         korpa.dodajUKorpuID(pid);      
     }
 
-    private void showCart() {
+    public void showCart() {
         korpa.printProizvodeUKorpi();
     }
 
-    private void removeProductFromCart() {
+    public void removeProductFromCart() {
         int pid = getUserInput();
         korpa.ukloniProizvodID(pid);
     }
     
     
-    public void kupi(){
-    
+    public void kupi(Kasa &k){
+        
+        for (Proizvod prod: korpa) {
+            
+            t=k.getTrenutnostanje;
+            t+=prod.getCena();
+            k.setTrenutnostanje(t);
+      
+        }
+        
+        for (Proizvod prod: korpa) {
+            
+              
+            try {
+                FileWriter f = new FileWriter("baza.txt", true);
+                f.write(showCart());
+            }
+            catch(FileNotFoundException | IOException e) {
+                System.out.println("Greska ");
+            }
+            finally{
+                if (f != null) f.close();
+            }
+	
+            
+      
+        }
     
     }
     
