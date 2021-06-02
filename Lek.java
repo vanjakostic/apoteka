@@ -1,4 +1,4 @@
-package apoteka;
+
 import java.util.Scanner;
 enum lekOblici {Tablete, Kapsule, Sirup, Prah}
 
@@ -28,11 +28,10 @@ class Lek extends Proizvod
         moguDijabeticari = true;
         }*/
 
-        Lek(int ID, String NAZIV, Proizvodjaci PROIZVODJAC, String DATUMPROIZVODNJE, String ROKTRAJANJA,
-        	String MESTOPROIZVODNJE,  double CENA, boolean DOSTUPAN, int BROJPROIZVODA,
+        Lek(int ID, String NAZIV, double CENA, int DOSTUPAN,
             lekOblici OBLIK, int UZIMANJANADAN, boolean MOGUDECA, boolean MOGUTRUDNICE, boolean MOGUDIJABETICARI)
         {
-        super(ID, NAZIV, PROIZVODJAC, DATUMPROIZVODNJE, ROKTRAJANJA, MESTOPROIZVODNJE, CENA, DOSTUPAN, BROJPROIZVODA);
+        super(ID, NAZIV, CENA, DOSTUPAN);
         oblik = OBLIK;
         uzimanjaNaDan = UZIMANJANADAN;
         moguDeca = MOGUDECA;

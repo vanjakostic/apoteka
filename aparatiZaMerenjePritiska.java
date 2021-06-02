@@ -2,7 +2,7 @@
 
 enum tipAparataZaMerenjePritiska {ZA_ZGLOB, ZA_NADLAKTICU}
 
-class AparatiZaMerenjePritiska extends Proizvod
+class aparatiZaMerenjePritiska extends Proizvod
 {
 tipAparataZaMerenjePritiska tip;
 boolean detektorAritmije;
@@ -17,7 +17,7 @@ boolean datumIVreme;
 boolean automatskoUkljucivanje;
 boolean automatskoIskljucivanje;
 
-AparatiZaMerenjePritiska(int id, String naziv, double cena, int dostupan, 
+aparatiZaMerenjePritiska(int id, String naziv, double cena, int dostupan, 
 		tipAparataZaMerenjePritiska tip, boolean detektorAritmije, int memorijaRezultata,
 		boolean indikatorZaPravilnoPostavljanjeManzetne, boolean glasovnaFunkcija, boolean indikatorHipertenzije, 
 		boolean detektorPokreta, boolean bluetoothFunkcija, boolean indikatorIstrosenostiBaterije,

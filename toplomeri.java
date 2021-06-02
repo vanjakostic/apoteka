@@ -1,8 +1,5 @@
 
 
-
-
-
 enum tipToplomera {DIGITALNI, BESKONTAKTNI, ZIVA}
 enum tipMerenja {ORALNO, REKTALNO, AKSILARNO}
 

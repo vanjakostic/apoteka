@@ -7,11 +7,12 @@ public class Kasa {
 
 	private double trenutnostanje;
 	
-	
+	Kasa() {this.trenutnostanje = 0.00;}
 	
 	Kasa(double trenutnostanje){ this.trenutnostanje=trenutnostanje; }
 	
 	double getTrenutnostanje() {return trenutnostanje; }
+	void setTrenutnoStanje(double tren) {this.trenutnostanje = tren;}
 	
 	/*void Prodaj(Korpa k,ArrayList<Korpa> spisakRacuna) {
 		spisakRacuna.add(k);

@@ -1,9 +1,9 @@
-
+enum Ukus {MENTA, BUBBLEGUM, BRESKVA, VISNJA , LUBENICA, ZELENICAJ, JAGODA}
+	
 
 
 public class Rastvor extends Proizvod {
 	
-	enum Ukus {MENTA, BUBBLEGUM, BRESKVA, VISNJA , LUBENICA, ZELENICAJ, JAGODA}
 	
 	private Ukus ukusrastvora;
 	private boolean izbeljuje;

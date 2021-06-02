@@ -1,6 +1,8 @@
+	enum Boje {PLAVA, ROZA, CRVENA, LJUBICASTA, ZUTA, ZELENA, BELA, NARANDZASTA, SIVA, CRNA};
+
 public class Cetkice extends Proizvod {
 	
-	enum Boje {PLAVA, ROZA, CRVENA, LJUBICASTA, ZUTA, ZELENA, BELA, NARANDZASTA, SIVA, CRNA}
+
 	
 	private Boje bojacetkice;
 	private boolean elektricna;

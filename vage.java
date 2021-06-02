@@ -1,4 +1,5 @@
 
+
 enum tipVage {MEHANICKA, DIGITALNA};
 enum jedinicaMere {KG, LB}
 

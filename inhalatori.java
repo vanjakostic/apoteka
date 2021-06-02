@@ -1,6 +1,5 @@
 
 
-
 enum tipInhalatora {KOMPRESORSKI, ULTRAZVUCNI}
 enum bojeInhalatora {ROZI, BELI, PLAVI}
 

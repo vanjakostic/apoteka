@@ -1,10 +1,9 @@
 
+enum vrstaPaste {ZA_DECU, ZA_PUSACE, IZBELJIVANJE, OSETLJIVI_ZUBI, PROTIV_KARIJESA};
+	enum ukusPaste {MENTA, BUBBLEGUM, BRESKVA, VISNJA, LUBENICA, ZELENI_CAJ};
+	
 public class Paste extends Proizvod{
 
-	
-	enum vrstaPaste {ZA_DECU, ZA_PUSACE, IZBELJIVANJE, OSETLJIVI_ZUBI, PROTIV_KARIJESA}
-	enum ukusPaste {MENTA, BUBBLEGUM, BRESKVA, VISNJA, LUBENICA, ZELENI_CAJ}
-	
 	private vrstaPaste vrsta;
 	private ukusPaste ukus;
     private int kolicina;
